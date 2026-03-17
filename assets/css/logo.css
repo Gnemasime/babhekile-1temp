@@ -1,0 +1,82 @@
+
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', 'Montserrat', 'Arial Black', sans-serif;
+            padding: 2rem;
+        }
+
+        /* EXACT STRUCTURE - with bigger logo image */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 2rem;                    /* increased gap for larger logo */
+            cursor: default;
+        }
+
+        /* MAKE LOGO IMAGE BIGGER - increased size significantly */
+        .logo img {
+            display: block;
+            width: auto;
+            height: 140px;                 /* MUCH BIGGER - increased from 88px to 140px */
+            filter: drop-shadow(0 15px 20px rgba(17, 34, 68, 0.3));
+            transition: all 0.2s;
+        }
+
+        /* ADJUST TEXT SIZE PROPORTIONALLY for better balance with bigger logo */
+        .sitename {
+            font-size: 4rem;                /* increased from 2.8rem to 4rem */
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: #164194;
+            line-height: 1.1;
+            margin: 0;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-family: 'Inter', 'Montserrat', 'Arial Black', sans-serif;
+            transform: translateY(0.05em);
+        }
+
+        /* OPTIONAL: Even larger on big screens */
+        @media (min-width: 1200px) {
+            .logo img {
+                height: 180px;              /* even bigger on large screens */
+            }
+            .sitename {
+                font-size: 5rem;
+            }
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 800px) {
+            .logo img {
+                height: 110px;
+            }
+            .sitename {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                gap: 1.2rem;
+            }
+            .logo img {
+                height: 80px;
+            }
+            .sitename {
+                font-size: 2.2rem;
+            }
+        }
+  
